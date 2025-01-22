@@ -1,0 +1,6 @@
+playwright
+torch
+numpy
+pillow
+pytesseract
+torchvision
