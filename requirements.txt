@@ -4,3 +4,4 @@ numpy
 pillow
 pytesseract
 torchvision
+facenet_pytorch
