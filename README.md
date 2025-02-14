@@ -14,18 +14,18 @@ This project uses Playwright and Python to perform some tests using AI with PyTo
 - **screenshots/**: Directory to store screenshots.
 - **takeWebpageScreenshots.py**: Script to capture screenshots of web pages.
 
-## Activate the Virtual Environment
+## 💻 Activate the Virtual Environment
 ```bash
 python -m venv venv
 .\venv\Scripts\activate
 ```
 
-## Install dependencies
+## 📦 Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-# Available Scripts
+# 📝 Available Scripts
 ## Capture Screenshot of a Web Page
 The script takeWebpageScreenshots.py captures a screenshot of a specified web page.
 ```bash
@@ -50,7 +50,7 @@ The script faceDetect.py detects faces in an image using the facenet_pytorch lib
 python src/tests/faceDetect.py
 ```
 
-## Dependencies
+## ⚙️ Dependencies
 The project dependencies are listed in the requirements.txt file:
 
 playwright
