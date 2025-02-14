@@ -5,39 +5,39 @@ import os
 from facenet_pytorch import MTCNN
 
 def main():
-    # Carregar a imagem
+    # Load the image
     image_path = "screenshots/webpageImage.png"
     if not os.path.exists(image_path):
-        print(f"Erro: Arquivo de imagem não encontrado em {image_path}")
+        print(f"Error: Image file not found at {image_path}")
         return
 
     image = Image.open(image_path)
     transform = T.Compose([T.ToTensor()])
-    image_tensor = transform(image).unsqueeze(0)  # Adiciona batch dimension
+    image_tensor = transform(image).unsqueeze(0)  # Add batch dimension
 
-    # Inicializar o detector de rostos
+    # Initialize the face detector
     mtcnn = MTCNN(keep_all=True)
 
-    # Detectar rostos
+    # Detect faces
     boxes, _ = mtcnn.detect(image)
     if boxes is None:
-        print("Nenhum rosto detectado.")
+        print("No faces detected.")
         return
 
-    # Garantir que a pasta para salvar as imagens recortadas exista
+    # Ensure the folder to save cropped face images exists
     os.makedirs("screenshots/faces", exist_ok=True)
 
-    # Salvar imagens recortadas dos rostos detectados e contar quantos foram encontrados
+    # Save cropped face images and count how many were found
     face_count = 0
     for i, box in enumerate(boxes):
         xmin, ymin, xmax, ymax = [int(b) for b in box]
         cropped_face = image.crop((xmin, ymin, xmax, ymax))
         cropped_face.save(f"screenshots/faces/face_{i}.png")
         face_count += 1
-        print(f"Imagem de rosto detectada salva em: screenshots/faces/face_{i}.png")
+        print(f"Detected face image saved at: screenshots/faces/face_{i}.png")
 
-    # Informar quantas imagens de rostos foram encontradas
-    print(f"Total de imagens de rostos detectadas: {face_count}")
+    # Inform how many face images were found
+    print(f"Total detected face images: {face_count}")
 
 if __name__ == "__main__":
     main()
