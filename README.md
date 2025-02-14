@@ -1,20 +1,20 @@
 ## Description
 
-Este projeto utiliza Playwright e Python para realizar alguns testes usando IA com PyTorch.
+This project uses Playwright and Python to perform some tests using AI with PyTorch.
 
-## 📝 Descrição dos Arquivos
-- **.gitignore**: Define arquivos e diretórios a serem ignorados pelo Git.
-- **README.md**: Documentação do projeto.
-- **requirements.txt**: Lista de dependências do projeto.
-- **src/**: Código-fonte principal do projeto.
-- **tests/**: Diretório contendo os testes.
-- **accessebility.py**: Código para testes de acessibilidade.
-- **faceDetect.py**: Código para detecção de rostos.
-- **personDetect.py**: Código para detecção de pessoas.
-- **screenshots/**: Diretório para armazenar capturas de tela.
-- **takeWebpageScreenshots.py**: Script para capturar capturas de tela de páginas web.
+## 📝 File Descriptions
+- **.gitignore**: Defines files and directories to be ignored by Git.
+- **README.md**: Project documentation.
+- **requirements.txt**: List of project dependencies.
+- **src/**: Main source code of the project.
+- **tests/**: Directory containing the tests.
+- **accessebility.py**: Code for accessibility tests.
+- **faceDetect.py**: Code for face detection.
+- **personDetect.py**: Code for person detection.
+- **screenshots/**: Directory to store screenshots.
+- **takeWebpageScreenshots.py**: Script to capture screenshots of web pages.
 
-## Ativar o Ambiente Virtual
+## Activate the Virtual Environment
 ```bash
 python -m venv venv
 .\venv\Scripts\activate
@@ -25,33 +25,33 @@ python -m venv venv
 pip install -r requirements.txt
 ```
 
-## Scripts Disponíveis
-# Capturar Screenshot de uma Página Web
-O script takeWebpageScreenshots.py captura uma screenshot de uma página web especificada.
+# Available Scripts
+## Capture Screenshot of a Web Page
+The script takeWebpageScreenshots.py captures a screenshot of a specified web page.
 ```bash
 python src/tests/takeWebpageScreenshots.py
 ```
 
-# Verificar Acessibilidade
-O script accessebility.py verifica a acessibilidade de uma página web e realiza análises de contraste, legibilidade do texto e cores.
+## Check Accessibility
+The script accessebility.py checks the accessibility of a web page and performs contrast, text readability, and color analysis.
 ```bash
 python src/tests/accessebility.py
 ```
 
-# Detectar Pessoas em uma Imagem
-O script personDetect.py detecta pessoas em uma imagem usando um modelo pré-treinado do PyTorch.
+## Detect People in an Image
+The script personDetect.py detects people in an image using a pre-trained PyTorch model.
 ```bash
 python src/tests/personDetect.py
 ```
 
-# Detectar Rostos em uma Imagem
-O script faceDetect.py detecta rostos em uma imagem usando a biblioteca facenet_pytorch.
+## Detect Faces in an Image
+The script faceDetect.py detects faces in an image using the facenet_pytorch library.
 ```bash
 python src/tests/faceDetect.py
 ```
 
-# Dependências
-As dependências do projeto estão listadas no arquivo requirements.txt:
+## Dependencies
+The project dependencies are listed in the requirements.txt file:
 
 playwright
 torch
@@ -60,4 +60,3 @@ pillow
 pytesseract
 torchvision
 facenet_pytorch
-
