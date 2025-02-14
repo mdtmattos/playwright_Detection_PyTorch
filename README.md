@@ -53,10 +53,10 @@ python src/tests/faceDetect.py
 ## ⚙️ Dependencies
 The project dependencies are listed in the requirements.txt file:
 
-playwright
-torch
-numpy
-pillow
-pytesseract
-torchvision
-facenet_pytorch
+- playwright
+- torch
+- numpy
+- pillow
+- pytesseract
+- torchvision
+- facenet_pytorch
